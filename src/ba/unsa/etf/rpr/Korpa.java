@@ -8,6 +8,7 @@ public class Korpa {
         brojArtikalaNaStanju = 0;
         for(int i = 0; i < artikli.length; i++){
             artikli[i] = new Artikl();
+            artikli[i] = null;
         }
     }
 
@@ -37,7 +38,7 @@ public class Korpa {
                     artikli[j] = artikli[j + 1];
                 }
                 // mozda treba postavit na null ?
-                artikli[artikli.length - 1] = new Artikl();
+                artikli[artikli.length - 1] = null;
                 break Zavrsi;
             }
         }
