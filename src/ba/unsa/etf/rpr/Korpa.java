@@ -2,14 +2,11 @@ package ba.unsa.etf.rpr;
 
 public class Korpa {
     private int brojArtikalaNaStanju;
-    Artikl[] artikli = new Artikl[50];
+    private Artikl[] artikli = new Artikl[50];
 
     Korpa(){
         brojArtikalaNaStanju = 0;
-        for(int i = 0; i < artikli.length; i++){
-            artikli[i] = new Artikl();
-            artikli[i] = null;
-        }
+
     }
 
     public boolean dodajArtikl(Artikl artikl){
@@ -26,6 +23,7 @@ public class Korpa {
     }
 
     public Artikl[] getArtikli() {
+
         return artikli;
     }
     public Artikl izbaciArtiklSaKodom(String kod){
@@ -51,4 +49,6 @@ public class Korpa {
         }
         return vrati;
     }
+
+
 }

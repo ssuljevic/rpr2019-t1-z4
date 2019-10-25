@@ -7,21 +7,19 @@ public class Supermarket {
     // konstruktor
     Supermarket() {
         this.brojArtikalaNaStanju = 0;
-        for(int i = 0; i < artikli.length; i++){
-            artikli[i] = new Artikl();
-            artikli[i] = null;
-        }
+
     }
 
-    public  void dodajArtikl(Artikl artikl){
+    public  boolean dodajArtikl(Artikl artikl){
 
         if( brojArtikalaNaStanju == artikli.length) {
-            // treba zabraniti dodavanje novih artikala npr
-            //try catch blok
+           return  false;
         }
 
         artikli[brojArtikalaNaStanju] = artikl;
         brojArtikalaNaStanju = brojArtikalaNaStanju + 1;
+
+        return  true;
     }
 
     public Artikl[] getArtikli() {

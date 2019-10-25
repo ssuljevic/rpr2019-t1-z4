@@ -26,4 +26,10 @@ public class Artikl {
     public String getKod() {
         return kod;
     }
+
+
+    public boolean equals( Artikl a) {
+        if( a.getKod().equals(getKod()) && a.getCijena() == getCijena() && a.getNaziv().equals(getNaziv())) return true;
+        return  false;
+    }
 }
